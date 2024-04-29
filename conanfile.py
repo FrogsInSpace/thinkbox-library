@@ -28,7 +28,7 @@ REQUIRES: list[str] = [
     'tinyxml2/9.0.0',
     'utfcpp/3.2.1',
     'xxhash/0.8.1',
-    'zlib/1.2.12',
+    'zlib/1.2.13',
     'gtest/cci.20210126',
     'xerces-c/3.2.3',
     'libe57format/2.2.0',
