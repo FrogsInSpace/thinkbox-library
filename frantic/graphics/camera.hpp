@@ -272,7 +272,12 @@ class camera {
         m_focalLength = 30;
         m_focalDistance = cameraState.tdist;
 
+#if MAX_VERSION_MAJOR < 27
         m_pixelAspect = GetCOREInterface()->GetRendApect();
+#else
+        // JW: API typo deprecation fix
+        m_pixelAspect = GetCOREInterface()->GetRendPixelAspect();
+#endif
 
         set_horizontal_fov( cameraState.fov );
         // set_orthographic_width( 400 * viewParams.zoom );
@@ -312,7 +317,12 @@ class camera {
         m_focalLength = 30;
         m_focalDistance = 100;
 
+#if MAX_VERSION_MAJOR < 27
         m_pixelAspect = GetCOREInterface()->GetRendApect();
+#else
+        // JW: API typo deprecation fix
+        m_pixelAspect = GetCOREInterface()->GetRendPixelAspect();
+#endif
 
         set_horizontal_fov( viewParams.fov );
         set_orthographic_width( 400 * viewParams.zoom );
@@ -405,7 +415,12 @@ class camera {
 
         m_outputSize = outputSize;
 
+#if MAX_VERSION_MAJOR < 27
         m_pixelAspect = GetCOREInterface()->GetRendApect();
+#else
+        // JW: API typo deprecation fix
+        m_pixelAspect = GetCOREInterface()->GetRendPixelAspect();
+#endif
 
         set_horizontal_fov( cameraState.fov );
 
